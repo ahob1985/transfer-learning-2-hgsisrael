@@ -66,6 +66,7 @@ function buildButtons() {
     // new code blow
     happyButton.styles("display", "none");
     sadButton.styles("display", "none");
+    trainButton.styles("display", "none");
     textP.html("New model training, please wait...");
     classifier.train(whileTraining);
   });
@@ -74,7 +75,7 @@ function buildButtons() {
   saveButton.parent(buttonDiv);
   saveButton.mousePressed(function() {
     classifier.save();
-  }
+  });
   saveButton.style("display", "none");
   buttonDiv.style("display", "none");
 }
